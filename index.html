@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fonts.css">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <script src="script.js"></script>
+    <title>Liverdooo</title>
+</head>
+
+<body onload="init();">
+    <div w3-include-html="./templates/header.html"></div>
+    
+    <div class="main">
+        <div class="mealMainBox">
+            <div class="headerImg">
+                <img src="./img/pizza.jpg" alt="pizza">
+            </div>
+            
+            <div class="restaurantName">
+                <h1>Pizzeria Milano</h1>
+                <div class="rating">
+                    <img src="./img/star.png" alt="star">
+                    <img src="./img/star.png" alt="star">
+                    <img src="./img/star.png" alt="star">
+                    <img src="./img/star.png" alt="star">
+                    <img src="./img/star.png" alt="star">
+                    (324 Bewertungen)
+                </div>
+                <br>
+                <!--Lieferkostenfrei ab 40€-->
+            </div>
+            
+            <div class="meals" id="meals">
+            
+            </div>
+        </div>
+        
+        <section class="cartSection">
+            <div class="basketContainer" id="basketContainer">
+                <!--div>
+                    <img src="img/close.png" alt="close Button" id="closeButton" class="close d-none" onclick="closeMobileCart()">
+                </div-->
+                <div class="basket">
+                    <h2>Warenkorb</h2>
+                    <div id="innerBasket" class="innerBasket">
+                        <div id="basketLogo" class="basketLogo">
+                            <img src="./img/basket.png" alt="basketImage">
+                            <span>
+                                Dein Warenkorb ist aktuell leer!
+                                Setze schnell was rein bevor es kalt wird!
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div id="mealInfoDialog" class="mealInfoDialog d-none">
+        <div class="dialog">
+            <div class="infoContainer">
+                <div>
+                    <img src="./img/close.png" alt="close" class="close" onclick="closeInfoContainer()">
+                </div>
+                <p>Mahlzeiten können Allergene enthalten</p>
+                <p>Liste der Allergene:</p>
+                <ol>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                    <li>Lorem</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    
+    <div id="mobileCart" class="mobileCart" onclick="openMobileCart()">
+        <img src="./img/basket_mobile.png" alt="mobile basket" class="basketImage">
+        <!--sup>1</sup-->
+    </div>
+    
+    <div w3-include-html="./templates/footer.html"></div>
+</body>
+</html>

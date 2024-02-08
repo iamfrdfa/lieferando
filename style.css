@@ -1,0 +1,485 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: #F15D01;
+    text-align: center;
+    font-size: larger;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.headerContent {
+    display: flex;
+    align-items: center;
+}
+
+.headerContent > h1 > a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.headerContent > img {
+    height: 50px;
+    width: 50px;
+    padding-right: 16px;
+}
+
+.headerImg > img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.restaurantName {
+    margin-left: 56px;
+}
+
+.rating > img {
+    width: 16px;
+    height: 16px;
+}
+
+.main {
+    display: flex;
+}
+
+.mealMainBox {
+    display: flex;
+    flex-direction: column;
+    width: 120%;
+}
+
+.basketContainer {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 100vh;
+    background-color: #F5F5F5;
+    top: 0;
+    right: 0;
+    border-left: 1px solid lightgray;
+}
+
+.basket {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 32px auto;
+}
+
+.addedToCart {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.innerBasket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 380px;
+}
+
+.innerBasket > img {
+    height: 60px;
+    width: 60px;
+}
+
+.innerBasket > span {
+    padding: 16px 48px
+}
+
+.basketLogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+}
+
+.basketLogo > img {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 24px;
+}
+
+.totalPrice {
+    width: 100%;
+    margin: 24px auto;
+    padding: 16px 0;
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    font-weight: bold;
+}
+
+.totalPrice td:first-child {
+    width: 82%;
+}
+.totalPrice td:nth-of-type(2) {
+    width: 18%;
+    text-align: right;
+    margin-bottom: 8px;
+}
+
+.mealDescription {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 150px;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    padding: 24px 40px;
+    margin: 32px 56px;
+    background-color: #f5f5f5;
+}
+
+.wholeMeal {
+    width: 75% !important;
+}
+
+.mealName {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dishDescription {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.mealInfo {
+    width: 24px;
+    height: 24px;
+}
+
+.mealImage {
+    display: flex;
+    align-items: center;
+}
+
+.mealImage > img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.mealIngredients > span{
+    font-weight: 500;
+}
+
+.addToBasket > img {
+    height: 40px;
+    width: 40px;
+    margin: 0 0 0 32px;
+    cursor: pointer;
+}
+
+.footer {
+    height: 72px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 32px;
+    border-top: 1px solid lightgray;
+}
+
+.footer > a {
+    text-decoration: none;
+    color: #000;
+}
+
+.footer > a:hover {
+    color: #F15D01;
+    cursor: pointer;
+}
+
+.dialog {
+    height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.infoContainer {
+    height: 75vh;
+    width: 75vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.infoContainer > p {
+    color: #000000;
+}
+
+.close {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.addedDishes,
+.leftSection,
+.midSection,
+.rightSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.leftSection {
+    width: 60%;
+    justify-content: flex-start;
+}
+
+.midSection {
+    width: 60px !important;
+}
+.rightSection {
+    width: 120px !important;
+}
+
+/*.leftSection,
+.rightSection {
+    margin: 0 auto;
+}*/
+
+.buttons {
+    cursor: pointer;
+    display: flex;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button > img {
+    height: 24px;
+    width: 24px;
+}
+
+.d-none {
+    display: none!important;
+}
+
+.mobileCart {
+    display: none;
+}
+
+.bottomAddButton {
+    display: none;
+}
+
+
+/* ########## Mobile Optimisation ########## */
+
+@media (max-width: 1300px) {
+    h2.mealName {
+        font-size: 18px;
+    }
+
+    h3.dishPrice {
+        font-size: 18px;
+    }
+
+    .mealImage {
+        display: none;
+    }
+
+    .dishDescription,
+    .mealIngredients {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .basketContainer {
+        display: none;
+    }
+
+    .cartSection {
+        height: 100%;
+        position: fixed;
+    }
+
+    .renderedMobileCart {
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        background-color: #f5f5f5;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .mobileCart {
+        display: flex;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        cursor: pointer;
+    }
+
+    sup {
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+        color: #fff;
+        margin-left: -24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        background-color: #F15D01;
+    }
+
+    .mobileCart > img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .cartDialog {
+        height: 100vh;
+        background-color: rgba(0,0,0,0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        z-index: 999;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .finalMobileCart {
+        display: flex;
+        flex-direction: column;
+        height: 70vh;
+        width: 65vw;
+        background-color: #F5F5F5;
+        top: 0;
+        right: 0;
+        border-left: 1px solid lightgray;
+    }
+}
+
+@media (max-width: 600px) {
+    .wholeMeal {
+        width: 80% !important;
+    }
+
+    .mealDescription {
+        height: auto;
+    }
+
+    .addToBasket > img {
+        height: 32px;
+        width: 32px;
+    }
+}
+
+@media (max-width: 566px) {
+
+    .addToBasket > img {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+@media (max-width: 490px) {
+    .wholeMeal {
+        width: 70% !important;
+    }
+
+    .addToBasket > img {
+        height: 24px;
+        width: 24px;
+    }
+
+    img.mealInfo {
+        height: 16px;
+        width: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .wholeMeal {
+        width: 70% !important;
+        margin-right: 24px;
+    }
+
+    .addToBasket > img {
+        height: 24px;
+        width: 24px;
+        margin: 0;
+    }
+
+    img.mealInfo {
+        height: 16px;
+        width: 16px;
+    }
+}
+
+@media (max-width: 380px) {
+    .restaurantName>h1 {
+        font-size: 24px;
+    }
+
+    .rating {
+        width: 256px;
+    }
+}
+
+@media (max-width: 380px) {
+    .restaurantName>h1 {
+        font-size: 24px;
+    }
+
+    .rating {
+        width: 200px;
+    }
+}
